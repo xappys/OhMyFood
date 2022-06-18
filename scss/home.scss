@@ -7,27 +7,27 @@ body {
     max-height: 100vw;
     margin: auto;
 }
-/* color variables begin */
+/* color variables */
 $primaryColor: #9356DC;
 $secondaryColor: #FF79DA;
 $tertiaryColor: #99E2D0;
-/* color variables end */
-/* font variables begin */
+$darkGray: (#e6e6e6);
+$lightGray: (#f5f5f5);
+/* font variables */
 $primaryFont: Shrikhand;
 $secondaryFont: Roboto;
-/* font variables end */
+/* mixin to center items */
 @mixin flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* flex center variable */
+    flex-direction: column;
 } 
 body {
     max-width: 100vw;
     margin: auto;
 }
 header {
-    @include flexCenter;
     #logo {
         box-sizing: border-box;
         width: 100vw;
@@ -41,6 +41,7 @@ header {
     }
     .logo {
         width: 45vw;
+        max-height: 70px;
     }
     #location {
         z-index: 0;
@@ -50,19 +51,26 @@ header {
         font-family: $secondaryFont;
         box-sizing:border-box;
         height: 65px;
-        background-color: rgb(240, 240, 240);
+        background-color: $darkGray;
         width: 100vw;
         padding-top: 20px;
+        .pin {
+            transform:translateY(5px);
+            padding-right: 10px;
+        }
     }
     }
-    #explore {
+    .explore {
+        @include flexCenter;
         text-align: center;
-        #title {
+        height: 250px;
+        background-color: $lightGray;
+        &__title {
             font-size: 20px;
             padding-bottom: 10px;
             padding-top: 10px;
         }
-        #subtitle {
+        &__subtitle {
             font-size: 14px;
             padding-bottom: 10px;
             padding-top: 10px;
@@ -76,21 +84,40 @@ header {
             border-radius: 25px;
             border: 0;
             color: white;
-            font-family: Roboto;
-            background-image: linear-gradient($primaryColor, $secondaryColor);
+            font-family: $secondaryFont;
+            background-image: linear-gradient($secondaryColor, $primaryColor);
         }
     }
-    #instructions {
-       .step {
+    .instructions {
         @include flexCenter;
+        .step {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         box-sizing: border-box;
         height: 80px;
         width: 90vw;
+        padding-left: 10px;
+        padding-right: 10px;
         border-radius: 25px;
-        margin: auto; /* centers the boxes */
         margin-top: 10px;
         margin-bottom: 10px;
-        background-color: rgb(240, 240, 240);
+        background-color: $lightGray;
+        box-shadow: 0px 5px 10px darken($darkGray, 5);
+        &__icon {
+            padding-right: 20px;
+            color: gray;
+        }
+        &__number {
+            @include flexCenter;
+            border-radius: 100%;
+            width: 25px;
+            height: 25px;
+            transform:translateX(-22px);
+            color: white;
+            font-family: $secondaryFont;
+            background-color: $primaryColor;
+        }
        } 
     }
     

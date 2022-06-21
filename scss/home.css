@@ -31,9 +31,10 @@ header #logo {
   z-index: 1;
 }
 
-header .logo {
+header__logo {
   width: 45vw;
   max-height: 70px;
+  color: black;
 }
 
 header #location {
@@ -176,5 +177,93 @@ header #location .pin {
   color: white;
   font-family: Roboto;
   background-color: #9356DC;
+}
+
+#restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f5f5;
+}
+
+.item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 190px;
+  width: 90vw;
+  margin: 10px;
+  border: 0px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 12px 6px #e1e1e1;
+          box-shadow: 0px 0px 12px 6px #e1e1e1;
+}
+
+.item__img {
+  width: 100%;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  -o-object-position: 70% 70%;
+     object-position: 70% 70%;
+}
+
+.footer {
+  background-color: #343434;
+  color: white;
+  line-height: 30px;
+  /* adds space above and below each item */
+  padding-top: 15px;
+}
+
+.footer__logo {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 30vw;
+  padding-left: 20px;
+}
+
+.footer .suggest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 27px;
+}
+
+.footer .suggest__icon {
+  position: relative;
+  top: 7px;
+  padding-right: 10px;
+  padding-left: -2px;
+}
+
+.footer .partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .partner__icon {
+  position: relative;
+  top: 7px;
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.footer .legal, .footer .contact {
+  padding-left: 20px;
 }
 /*# sourceMappingURL=home.css.map */

@@ -17,7 +17,7 @@ body {
   margin: auto;
 }
 
-header .logo {
+.header .logo {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100vw;
@@ -31,13 +31,13 @@ header .logo {
   z-index: 1;
 }
 
-header__logo {
+.header__logo {
   width: 45vw;
   max-height: 70px;
   color: black;
 }
 
-header .location {
+.header .location {
   z-index: 0;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -58,7 +58,7 @@ header .location {
   padding-top: 20px;
 }
 
-header .location .pin {
+.header .location .pin {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
   padding-right: 10px;
@@ -239,7 +239,7 @@ header .location .pin {
   transition: opacity 500ms ease-in-out;
 }
 
-.item__icon:hover {
+.item__icon :hover {
   opacity: 1;
 }
 

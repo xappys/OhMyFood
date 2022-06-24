@@ -234,6 +234,13 @@ header .location .pin {
   right: 20px;
   bottom: 40px;
   font-size: 25px;
+  opacity: 0.4;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.item__icon:hover {
+  opacity: 1;
 }
 
 .footer {

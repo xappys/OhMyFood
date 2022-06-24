@@ -159,7 +159,12 @@ header {
             right: 20px;
             bottom: 40px;
             font-size: 25px;
-        }
+            opacity: 0.4;
+            transition: opacity 500ms ease-in-out;
+            :hover {
+            opacity: 1;
+            }
+        }   
     }
     .footer {
         background-color: darken($darkGray, 70);

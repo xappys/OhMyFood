@@ -41,6 +41,7 @@ $secondaryFont: Roboto;
     100% {transform: rotate(1440deg);
         visibility: hidden;
         scale: 0;
+        transform:translateY(-50px);
         opacity: 0;
         background-color: $darkGray;
         }

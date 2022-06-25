@@ -18,22 +18,23 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 0;
+    background-color: #e6e6e6;
   }
-  50% {
-    -webkit-transform: rotate(1080deg);
-            transform: rotate(1080deg);
-    width: 200px;
-    height: 200px;
-    opacity: 1;
+  90% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+    scale: 1;
+    opacity: 0.8;
     visibility: visible;
+    background-color: #e6e6e6;
   }
   100% {
-    -webkit-transform: rotate(2160deg);
-            transform: rotate(2160deg);
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
     visibility: hidden;
-    width: 0;
-    height: 0;
+    scale: 0;
     opacity: 0;
+    background-color: #e6e6e6;
   }
 }
 @keyframes spinner {
@@ -41,22 +42,23 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 0;
+    background-color: #e6e6e6;
   }
-  50% {
-    -webkit-transform: rotate(1080deg);
-            transform: rotate(1080deg);
-    width: 200px;
-    height: 200px;
-    opacity: 1;
+  90% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+    scale: 1;
+    opacity: 0.8;
     visibility: visible;
+    background-color: #e6e6e6;
   }
   100% {
-    -webkit-transform: rotate(2160deg);
-            transform: rotate(2160deg);
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
     visibility: hidden;
-    width: 0;
-    height: 0;
+    scale: 0;
     opacity: 0;
+    background-color: #e6e6e6;
   }
 }
 
@@ -74,7 +76,7 @@ body {
   margin-top: -100px;
   border-radius: 50%;
   border: 20px solid transparent;
-  border-top-color: #000;
+  border-top-color: #FF79DA;
   -webkit-animation-name: spinner;
           animation-name: spinner;
   -webkit-animation-delay: 0s;
@@ -315,14 +317,6 @@ body {
 
 .item__icon:hover {
   opacity: 1;
-}
-
-.item__icon .fa-solid, .item__icon fa-heart {
-  z-index: 0;
-}
-
-.item__icon .fa-regular, .item__icon fa-heart {
-  z-index: 1;
 }
 
 .footer {

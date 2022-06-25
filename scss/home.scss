@@ -27,20 +27,22 @@ $secondaryFont: Roboto;
 @keyframes spinner {
     
     0% {transform: rotate(0deg);
-        opacity: 0;}
-    
-    50% {transform: rotate(1080deg);
-        width: 200px;
-        height: 200px;
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        background-color: $darkGray;
         }
     
-    100% {transform: rotate(2160deg);
+    90% {transform: rotate(1440deg);
+        scale: 1;
+        opacity: 0.8;
+        visibility: visible;
+        background-color: $darkGray;
+        }
+    
+    100% {transform: rotate(1440deg);
         visibility: hidden;
-        width: 0;
-        height: 0;
+        scale: 0;
         opacity: 0;
+        background-color: $darkGray;
         }
 }
 .spinner:before {
@@ -55,7 +57,7 @@ $secondaryFont: Roboto;
     margin-top: -100px;
     border-radius: 50%;
     border: 20px solid transparent;
-    border-top-color: #000;
+    border-top-color: $secondaryColor;
     animation-name:spinner;
     animation-delay:0s;
     animation-duration:3s;

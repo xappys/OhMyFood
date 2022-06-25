@@ -28,6 +28,10 @@ $secondaryFont: Roboto;
     display: flex;
     justify-content: space-between;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 .header {
     display: flex;
     &__icon {
@@ -77,6 +81,11 @@ $secondaryFont: Roboto;
         right: 35px;
         bottom: 30px;
         font-size: 25px;
+        opacity: 0.4;
+        transition: opacity 500ms ease-in-out;
+        &:hover {
+        opacity: 1;
+        }
     }
     &__item {
         box-sizing: border-box;
@@ -114,6 +123,11 @@ $secondaryFont: Roboto;
         color: white;
         font-family: $secondaryFont;
         background-image: linear-gradient($secondaryColor, $primaryColor);
+        box-shadow: 0px 0px 6px 0.5px gray;
+        &:hover {
+            box-shadow: 0px 0px 12px 0.5px gray;
+            background: linear-gradient(lighten($secondaryColor, 3), lighten($primaryColor, 3));
+        }
     }
 }
 

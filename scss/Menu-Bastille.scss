@@ -100,7 +100,20 @@ $secondaryFont: Roboto;
         &__price {
             align-self:flex-end; /*centers price vertically */
             padding-right: 20px;
-        }
+        } 
+    }
+    button {
+        margin: auto; /* centers button horizontally */
+        display: block; /* centers button horizontally */
+        width: 180px;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: 0;
+        color: white;
+        font-family: $secondaryFont;
+        background-image: linear-gradient($secondaryColor, $primaryColor);
     }
 }
 

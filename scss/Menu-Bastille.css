@@ -119,6 +119,23 @@ body {
   padding-right: 20px;
 }
 
+.menu button {
+  margin: auto;
+  /* centers button horizontally */
+  display: block;
+  /* centers button horizontally */
+  width: 180px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
 .footer {
   background-color: #343434;
   color: white;

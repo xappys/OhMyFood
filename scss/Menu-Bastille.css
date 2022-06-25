@@ -13,6 +13,15 @@ body {
 /* color variables */
 /* font variables */
 /* mixin to center items */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +54,7 @@ body {
 .menu {
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 10px;
   z-index: 1;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
@@ -52,6 +62,8 @@ body {
   height: auto;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  margin-bottom: -50px;
+  /* fixes 50px of white-space below menu section due to translateY */
 }
 
 .menu__title {
@@ -107,18 +119,7 @@ body {
   padding-right: 20px;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .footer {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
   background-color: #343434;
   color: white;
   line-height: 30px;

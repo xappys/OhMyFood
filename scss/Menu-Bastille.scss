@@ -7,6 +7,10 @@ body {
     width: 100%;
     margin: auto;
 }
+/* variables for menu dishes below */
+$num-bars: 9;
+$anim-dur: 2000ms;
+$anim-delay: $anim-dur / $num-bars;
 /* color variables */
 $primaryColor: #9356DC;
 $secondaryColor: #FF79DA;
@@ -70,6 +74,7 @@ a {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     margin-bottom: -50px; /* fixes 50px of white-space below menu section due to translateY */
+
     &__title {
         font-family:$primaryFont;
         font-size: 28px;
@@ -104,6 +109,26 @@ a {
         border-radius: 20px;
         background-color: white;
         box-shadow: 0px 0px 12px 6px #e1e1e1;
+        transform: translateX(20%);
+        opacity: 0;
+        animation: slide $anim-dur;
+        @for $i from 1 through 9 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+                animation-fill-mode: forwards;
+            }
+        }
+        @keyframes slide {
+            0% { 
+                transform: translateY(20%);
+                opacity: 0;
+            }  
+            100% { 
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+             
         &__title {
             padding-top: 10px;
             padding-left: 10px;

@@ -10,6 +10,7 @@ body {
   margin: auto;
 }
 
+/* variables for menu dishes below */
 /* color variables */
 /* font variables */
 /* mixin to center items */
@@ -119,6 +120,100 @@ a {
   background-color: white;
   -webkit-box-shadow: 0px 0px 12px 6px #e1e1e1;
           box-shadow: 0px 0px 12px 6px #e1e1e1;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+  opacity: 0;
+  -webkit-animation: slide 2000ms;
+          animation: slide 2000ms;
+}
+
+.menu__item--1 {
+  -webkit-animation-delay: 222.22222ms;
+          animation-delay: 222.22222ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--2 {
+  -webkit-animation-delay: 444.44444ms;
+          animation-delay: 444.44444ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--3 {
+  -webkit-animation-delay: 666.66667ms;
+          animation-delay: 666.66667ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--4 {
+  -webkit-animation-delay: 888.88889ms;
+          animation-delay: 888.88889ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--5 {
+  -webkit-animation-delay: 1111.11111ms;
+          animation-delay: 1111.11111ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--6 {
+  -webkit-animation-delay: 1333.33333ms;
+          animation-delay: 1333.33333ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--7 {
+  -webkit-animation-delay: 1555.55556ms;
+          animation-delay: 1555.55556ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--8 {
+  -webkit-animation-delay: 1777.77778ms;
+          animation-delay: 1777.77778ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--9 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 .menu__item__title {

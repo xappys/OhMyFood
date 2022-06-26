@@ -18,7 +18,6 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 0;
-    background-color: #e6e6e6;
   }
   90% {
     -webkit-transform: rotate(1440deg);
@@ -26,7 +25,6 @@ body {
     scale: 1;
     opacity: 0.8;
     visibility: visible;
-    background-color: #e6e6e6;
   }
   100% {
     -webkit-transform: rotate(1440deg);
@@ -36,7 +34,6 @@ body {
     -webkit-transform: translateY(-50px);
             transform: translateY(-50px);
     opacity: 0;
-    background-color: #e6e6e6;
   }
 }
 @keyframes spinner {
@@ -44,7 +41,6 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     opacity: 0;
-    background-color: #e6e6e6;
   }
   90% {
     -webkit-transform: rotate(1440deg);
@@ -52,7 +48,6 @@ body {
     scale: 1;
     opacity: 0.8;
     visibility: visible;
-    background-color: #e6e6e6;
   }
   100% {
     -webkit-transform: rotate(1440deg);
@@ -62,7 +57,6 @@ body {
     -webkit-transform: translateY(-50px);
             transform: translateY(-50px);
     opacity: 0;
-    background-color: #e6e6e6;
   }
 }
 
@@ -75,14 +69,67 @@ body {
   left: 50%;
   width: 200px;
   height: 200px;
+  z-index: 999;
   margin-left: -100px;
   /* negative margins of 1/2 height/width required to center */
   margin-top: -100px;
   border-radius: 50%;
   border: 20px solid transparent;
   border-top-color: #FF79DA;
+  background-color: #e6e6e6;
   -webkit-animation-name: spinner;
           animation-name: spinner;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes loading-background {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loading-background {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-background {
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-animation-name: loading-background;
+          animation-name: loading-background;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   -webkit-animation-duration: 3s;

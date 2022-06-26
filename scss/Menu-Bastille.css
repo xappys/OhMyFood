@@ -51,6 +51,13 @@ a {
   /* centers the logo as arrow takes up space */
 }
 
+.header .arrow::after {
+  content: '-';
+  /* border: 1px solid black; */
+  padding-right: 13px;
+  color: transparent;
+}
+
 .img {
   width: 100%;
   z-index: 0;
@@ -200,5 +207,9 @@ a {
 
 .footer .legal, .footer .contact {
   padding-left: 20px;
+}
+
+.footer .contact {
+  color: white !important;
 }
 /*# sourceMappingURL=Menu-Bastille.css.map */

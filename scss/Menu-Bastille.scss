@@ -48,6 +48,12 @@ a {
         z-index: 1;
         transform:translateX(-20.13px); /* centers the logo as arrow takes up space */
     }
+    .arrow::after {
+        content: '-';
+        /* border: 1px solid black; */
+        padding-right: 13px;
+        color: transparent;
+    }
 }
 .img {
     width: 100%;
@@ -161,5 +167,8 @@ a {
     }
     .legal, .contact {
         padding-left: 20px;
+    }
+    .contact {
+        color: white !important;
     }
 }

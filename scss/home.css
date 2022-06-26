@@ -424,4 +424,8 @@ a {
 .footer .legal, .footer .contact {
   padding-left: 20px;
 }
+
+.footer .contact {
+  color: white !important;
+}
 /*# sourceMappingURL=home.css.map */

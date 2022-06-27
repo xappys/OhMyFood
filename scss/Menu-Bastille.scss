@@ -146,6 +146,9 @@ a {
         }
         &__select {
             @include flexCenter;
+            position: absolute;
+            top: 0;
+            right: 0;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
             transform-origin: 100% 100%;
@@ -189,7 +192,6 @@ a {
             background: linear-gradient(lighten($secondaryColor, 3), lighten($primaryColor, 3));
         }
     }
-}
 
 .footer {
     background-color: darken($darkGray, 70);

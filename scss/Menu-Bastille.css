@@ -123,6 +123,8 @@ a {
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
   opacity: 0;
+  overflow-x: hidden;
+  /* to hide the hover effect */
   -webkit-animation: slide 2000ms;
           animation: slide 2000ms;
 }
@@ -219,11 +221,13 @@ a {
 .menu__item__title {
   padding-top: 10px;
   padding-left: 10px;
+  font-size: 18px;
 }
 
 .menu__item__subtitle {
   padding-left: 10px;
   padding-top: 4px;
+  font-size: 14px;
 }
 
 .menu__item__price {
@@ -231,6 +235,59 @@ a {
       align-self: flex-end;
   /*centers price vertically */
   padding-right: 20px;
+}
+
+.menu__item__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: translateX(85px);
+          transform: translateX(85px);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  height: 100%;
+  width: 85px;
+  background-color: #99E2D0;
+}
+
+.menu__item__select__icon {
+  font-size: 25px;
+  color: white;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
+}
+
+.menu__item__select:active > .menu__item__select__icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.menu__item:hover > .menu__item__select {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .menu button {

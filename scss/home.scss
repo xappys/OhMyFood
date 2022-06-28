@@ -11,6 +11,7 @@ body {
 @media only screen and (min-width: 992px) {
     .instructions__title {
         text-align: center;
+        padding-left: 0px !important;
     }
     .steps {
         display: flex !important;
@@ -23,6 +24,10 @@ body {
         }
     }
     .restaurants {
+        &__title {
+            text-align: center;
+            padding-left: 0px !important;
+        }
         &__items {
             flex-direction: row !important;
             justify-content: space-around !important;
@@ -241,6 +246,7 @@ a {
     .restaurants {
         background-color: $lightGray;
         padding-top: 20px;
+        padding-bottom: 10px;
         &__title {
             padding-left: 30px;
             padding-bottom: 10px;

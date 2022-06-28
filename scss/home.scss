@@ -35,6 +35,9 @@ body {
         .item {
             width: 24% !important;
             height: 270px !important;
+            &__icon--off, &__icon--on {
+                bottom: 60px !important;
+            }
         }
     }
     .footer {
@@ -282,15 +285,15 @@ a {
         &__title {
             font-family: $secondaryFont;
             padding-left: 15px;
-            padding-right: 10px;
+            padding-right: 55px;
             padding-top: 5px;
 
         }
         &__icon--off, &__icon--on {
             float: right;
-            position: relative;
+            position: absolute;
             right: 20px;
-            bottom: 40px;
+            bottom: 20px;
             font-size: 25px;
             opacity: 1;
             color: 2px solid black;

@@ -161,13 +161,13 @@ a {
                 font-size: 25px;
                 color: white;
                 transform:rotate(-360deg);
-                transition: transform 1000ms;
+                transition: 1000ms transform 100ms;
             }
             }
             &:hover > &__select {
                 transform:translateX(0px);
             }
-            &:hover > &__select__icon {
+            &:hover .menu__item__select__icon {
                 transform:rotate(0deg);
             }
         }

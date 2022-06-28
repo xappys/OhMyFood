@@ -271,13 +271,13 @@ a {
 
 .menu__item__select__icon {
   font-size: 25px;
-  color: black;
+  color: white;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
-  -webkit-transition: -webkit-transform 1000ms;
-  transition: -webkit-transform 1000ms;
-  transition: transform 1000ms;
-  transition: transform 1000ms, -webkit-transform 1000ms;
+  -webkit-transition: 1000ms -webkit-transform 100ms;
+  transition: 1000ms -webkit-transform 100ms;
+  transition: 1000ms transform 100ms;
+  transition: 1000ms transform 100ms, 1000ms -webkit-transform 100ms;
 }
 
 .menu__item:hover > .menu__item__select {
@@ -285,7 +285,7 @@ a {
           transform: translateX(0px);
 }
 
-.menu__item:hover > .menu__item__select__icon {
+.menu__item:hover .menu__item__select__icon {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }

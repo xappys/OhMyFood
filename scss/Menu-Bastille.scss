@@ -86,16 +86,21 @@ a {
         width:100px;
         border-bottom: 3px solid $tertiaryColor;
     }
-    &__icon {
+    &__icon--off, &__icon--on {
         float: right;
         position: relative;
         right: 35px;
         bottom: 30px;
         font-size: 25px;
-        opacity: 0.4;
-        transition: opacity 500ms ease-in-out;
-        &:hover {
         opacity: 1;
+        transition: opacity 500ms ease-in-out;
+    }
+    &__icon--on {
+        color: $primaryColor;
+        transform: translateX(25px);
+        opacity: 0;
+        &:hover {
+            opacity: 1;
         }
     }
     &__item {

@@ -224,18 +224,23 @@ a {
             padding-left: 15px;
             padding-top: 5px;
         }
-        &__icon {
+        &__icon--off, &__icon--on {
             float: right;
             position: relative;
             right: 20px;
             bottom: 40px;
             font-size: 25px;
-            opacity: 0.4;
+            opacity: 1;
             color: 2px solid black;
             background-color: white;
             transition: opacity 500ms ease-in-out;
+        }
+        &__icon--on {
+            color: $primaryColor;
+            transform: translateX(25px);
+            opacity: 0;
             &:hover {
-            opacity: 1;
+                opacity: 1;
             }
         }   
     }

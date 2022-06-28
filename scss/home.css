@@ -362,20 +362,27 @@ a {
   padding-top: 5px;
 }
 
-.item__icon {
+.item__icon--off, .item__icon--on {
   float: right;
   position: relative;
   right: 20px;
   bottom: 40px;
   font-size: 25px;
-  opacity: 0.4;
+  opacity: 1;
   color: 2px solid black;
   background-color: white;
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
 }
 
-.item__icon:hover {
+.item__icon--on {
+  color: #9356DC;
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+  opacity: 0;
+}
+
+.item__icon--on:hover {
   opacity: 1;
 }
 

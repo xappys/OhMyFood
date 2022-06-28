@@ -92,18 +92,25 @@ a {
   border-bottom: 3px solid #99E2D0;
 }
 
-.menu__icon {
+.menu__icon--off, .menu__icon--on {
   float: right;
   position: relative;
   right: 35px;
   bottom: 30px;
   font-size: 25px;
-  opacity: 0.4;
+  opacity: 1;
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
 }
 
-.menu__icon:hover {
+.menu__icon--on {
+  color: #9356DC;
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+  opacity: 0;
+}
+
+.menu__icon--on:hover {
   opacity: 1;
 }
 

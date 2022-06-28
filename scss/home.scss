@@ -141,6 +141,7 @@ a {
 }
 .header {
     &__logobox {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -152,7 +153,8 @@ a {
         z-index: 1;
     }
     &__logo {
-        width: 90%;
+        height: 95%;
+        max-width: 99%;
         color: $logoColor;
     }
     .location {

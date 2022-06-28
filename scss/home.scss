@@ -7,6 +7,41 @@ body {
     width: 100%;
     margin: auto;
 }
+/* media query for mobile version */
+@media only screen and (min-width: 992px) {
+    .instructions__title {
+        text-align: center;
+    }
+    .steps {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        
+        .step {
+            width: 30% !important;
+            justify-content: center !important;
+        }
+    }
+    .restaurants {
+        &__items {
+            flex-direction: row !important;
+            justify-content: space-around !important;
+        }
+        .item {
+            width: 24% !important;
+            height: 270px !important;
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5px;
+        &__logo {
+            width: 150px !important;
+            padding-top: 5px !important;
+        }
+    }
+}
 /* color variables */
 $primaryColor: #9356DC;
 $secondaryColor: #FF79DA;
@@ -97,19 +132,20 @@ a {
     animation-timing-function:ease-in-out;
 }
 .header {
-    .logo {
+    &__logobox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 80px;
-        display: inline-block;
         text-align: center;
-        line-height: 110px;
-        box-shadow: 0px 0.1px 5px gray;
+        box-shadow: 0px 5px 5px gray;
         font-family: $primaryFont;
         z-index: 1;
     }
     &__logo {
-        width: 45%;
-        max-height: 70px;
+        height: 70px;
         color: $logoColor;
     }
     .location {
@@ -165,8 +201,14 @@ a {
         }
     }
     .instructions {
-        @include flexCenter;
-        margin-top: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        &__title {
+            padding-left: 30px;
+        }
+        .steps {
+            @include flexCenter;
+        }
         .step {
         display: flex;
         flex-direction: row;
@@ -197,10 +239,17 @@ a {
        } 
     }
     .restaurants {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background-color: $lightGray;
+        padding-top: 20px;
+        &__title {
+            padding-left: 30px;
+            padding-bottom: 10px;
+        }
+        &__items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     .item {
         height: 190px;
@@ -210,6 +259,11 @@ a {
         border-radius: 20px;
         background-color: white;
         box-shadow: 0px 0px 12px 6px #e1e1e1;
+        transform:scale(1);
+        animation: transform 500ms; 
+        &:hover {
+            transform:scale(1.02);
+        }
         &__img {
             width:100%;
             height: 60%;
@@ -222,7 +276,9 @@ a {
         &__title {
             font-family: $secondaryFont;
             padding-left: 15px;
+            padding-right: 10px;
             padding-top: 5px;
+
         }
         &__icon--off, &__icon--on {
             float: right;
@@ -245,6 +301,7 @@ a {
         }   
     }
     .footer {
+        overflow-y: hidden;
         background-color: darken($darkGray, 70);
         color: white;
         line-height: 30px; /* adds space above and below each item */
@@ -256,25 +313,24 @@ a {
         }
         .suggest {
             display: flex;
-            padding-left: 27px;
             &__icon {
-                position: relative;
-                top: 7px;
-                padding-right: 10px;
-                padding-left: -2px;
+                width: 20px;
+                padding-left: 20px;
+                padding-right: 30px;
+                transform:translateY(8px);
             }
         }
         .partner {
             display: flex;
             &__icon {
-                position: relative;
-                top: 7px;
-                padding-right: 10px;
+                width: 20px;
                 padding-left: 20px;
+                padding-right: 30px;
+                transform:translateY(8px);
             }
         }
         .legal, .contact {
-            padding-left: 20px;
+            padding-left: 50px;
         }
         .contact {
             color: white !important;

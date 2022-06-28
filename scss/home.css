@@ -10,6 +10,55 @@ body {
   margin: auto;
 }
 
+/* media query for mobile version */
+@media only screen and (min-width: 992px) {
+  .instructions__title {
+    text-align: center;
+  }
+  .steps {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+  .steps .step {
+    width: 30% !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .restaurants__items {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+  .restaurants .item {
+    width: 24% !important;
+    height: 270px !important;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 5px;
+  }
+  .footer__logo {
+    width: 150px !important;
+    padding-top: 5px !important;
+  }
+}
+
 /* color variables */
 /* font variables */
 /* mixin to center items */
@@ -148,21 +197,28 @@ a {
           animation-timing-function: ease-in-out;
 }
 
-.header .logo {
+.header__logobox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 80px;
-  display: inline-block;
   text-align: center;
-  line-height: 110px;
-  -webkit-box-shadow: 0px 0.1px 5px gray;
-          box-shadow: 0px 0.1px 5px gray;
+  -webkit-box-shadow: 0px 5px 5px gray;
+          box-shadow: 0px 5px 5px gray;
   font-family: Shrikhand;
   z-index: 1;
 }
 
 .header__logo {
-  width: 45%;
-  max-height: 70px;
+  height: 70px;
   color: black;
 }
 
@@ -249,6 +305,15 @@ a {
 }
 
 .instructions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.instructions__title {
+  padding-left: 30px;
+}
+
+.instructions .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +327,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 10px;
 }
 
 .instructions .step {
@@ -318,6 +382,16 @@ a {
 }
 
 .restaurants {
+  background-color: #f5f5f5;
+  padding-top: 20px;
+}
+
+.restaurants__title {
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.restaurants__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,7 +402,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f5f5f5;
 }
 
 .item {
@@ -340,6 +413,15 @@ a {
   background-color: white;
   -webkit-box-shadow: 0px 0px 12px 6px #e1e1e1;
           box-shadow: 0px 0px 12px 6px #e1e1e1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: transform 500ms;
+          animation: transform 500ms;
+}
+
+.item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .item__img {
@@ -359,6 +441,7 @@ a {
 .item__title {
   font-family: Roboto;
   padding-left: 15px;
+  padding-right: 10px;
   padding-top: 5px;
 }
 
@@ -387,6 +470,7 @@ a {
 }
 
 .footer {
+  overflow-y: hidden;
   background-color: #343434;
   color: white;
   line-height: 30px;
@@ -405,14 +489,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 27px;
 }
 
 .footer .suggest__icon {
-  position: relative;
-  top: 7px;
-  padding-right: 10px;
-  padding-left: -2px;
+  width: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 
 .footer .partner {
@@ -422,14 +506,15 @@ a {
 }
 
 .footer .partner__icon {
-  position: relative;
-  top: 7px;
-  padding-right: 10px;
+  width: 20px;
   padding-left: 20px;
+  padding-right: 30px;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 
 .footer .legal, .footer .contact {
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .footer .contact {

@@ -207,6 +207,7 @@ a {
 
 .header__logobox {
   position: relative;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

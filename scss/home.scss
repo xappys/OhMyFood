@@ -142,6 +142,7 @@ a {
 .header {
     &__logobox {
         position: relative;
+        overflow-x: hidden;
         display: flex;
         align-items: center;
         justify-content: center;

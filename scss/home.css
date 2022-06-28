@@ -469,8 +469,6 @@ a {
 
 .item__icon--on {
   color: #9356DC;
-  -webkit-transform: translateX(25px);
-          transform: translateX(25px);
   opacity: 0;
 }
 

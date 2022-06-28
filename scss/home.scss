@@ -302,7 +302,6 @@ a {
         }
         &__icon--on {
             color: $primaryColor;
-            transform: translateX(25px);
             opacity: 0;
             &:hover {
                 opacity: 1;

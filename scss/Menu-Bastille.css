@@ -34,10 +34,20 @@ a {
   display: flex;
 }
 
-.header__icon {
+.header__return {
   padding-top: 28px;
   padding-left: 15px;
   font-size: 23px;
+}
+
+.header__return::before {
+  padding-right: 35px;
+  color: black;
+}
+
+.header__link {
+  height: 23.2px;
+  line-height: 80px;
 }
 
 .header__logo {
@@ -50,13 +60,6 @@ a {
   -webkit-transform: translateX(-20.13px);
           transform: translateX(-20.13px);
   /* centers the logo as arrow takes up space */
-}
-
-.header .arrow::after {
-  content: '-';
-  /* border: 1px solid black; */
-  padding-right: 13px;
-  color: transparent;
 }
 
 .img {

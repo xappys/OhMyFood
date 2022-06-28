@@ -38,11 +38,15 @@ a {
 }
 .header {
     display: flex;
-    &__icon {
+    &__return {
         padding-top: 28px;
         padding-left: 15px;
         font-size: 23px;
         }
+    &__return::before {
+        padding-right: 35px;
+        color: black;
+    }
     &__logo {
         width: 100%;
         height: 80px;
@@ -51,12 +55,6 @@ a {
         font-family: $primaryFont;
         z-index: 1;
         transform:translateX(-20.13px); /* centers the logo as arrow takes up space */
-    }
-    .arrow::after {
-        content: '-';
-        /* border: 1px solid black; */
-        padding-right: 13px;
-        color: transparent;
     }
 }
 .img {

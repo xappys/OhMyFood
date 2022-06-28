@@ -206,8 +206,6 @@ a {
 }
 
 .header__logobox {
-  position: relative;
-  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,7 +225,7 @@ a {
 }
 
 .header__logo {
-  height: 70px;
+  width: 90%;
   color: black;
 }
 

@@ -7,6 +7,29 @@ body {
     width: 100%;
     margin: auto;
 }
+/* media query to truncate long item titles on small screens */
+@media only screen and (max-width: 430px) {
+    .menu__item {
+        :hover .menu__item__title--1 {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        :hover .menu__item__title--2 {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        :hover .menu__item__subtitle--2 {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        } 
+    }
+}
 /* variables for menu dishes below */
 $num-bars: 9;
 $anim-dur: 2000ms;
@@ -104,6 +127,8 @@ a {
         }
     }
     &__item {
+        display: flex;
+        justify-content: space-between;
         box-sizing: border-box;
         height: 75px;
         margin-top: 10px;
@@ -133,7 +158,11 @@ a {
                 opacity: 1;
             }
         }
-             
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }    
         &__title {
             padding-top: 10px;
             padding-left: 10px;
@@ -145,21 +174,17 @@ a {
             font-size: 14px;
         }
         &__price {
-            align-self:flex-end; /*centers price vertically */
             padding-right: 20px;
+            padding-top: 30px;
+            
         }
         &__select {
             @include flexCenter;
-            position: absolute;
-            top: 0;
-            right: 0;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-            transform-origin: 100% 100%;
-            transform:translateX(85px);
-            transition: transform 500ms;
+            transition: width 500ms;
             height: 100%;
-            width: 85px;
+            width: 0px;
             background-color: $tertiaryColor;
             &__icon {
                 font-size: 25px;
@@ -169,7 +194,7 @@ a {
             }
             }
             &:hover > &__select {
-                transform:translateX(0px);
+                width: 85px;
             }
             &:hover .menu__item__select__icon {
                 transform:rotate(0deg);

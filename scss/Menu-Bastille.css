@@ -10,6 +10,28 @@ body {
   margin: auto;
 }
 
+/* media query to truncate long item titles on small screens */
+@media only screen and (max-width: 430px) {
+  .menu__item :hover .menu__item__title--1 {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu__item :hover .menu__item__title--2 {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu__item :hover .menu__item__subtitle--2 {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 /* variables for menu dishes below */
 /* color variables */
 /* font variables */
@@ -116,6 +138,12 @@ a {
 }
 
 .menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 75px;
@@ -224,6 +252,16 @@ a {
   }
 }
 
+.menu__item__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
 .menu__item__title {
   padding-top: 10px;
   padding-left: 10px;
@@ -237,10 +275,8 @@ a {
 }
 
 .menu__item__price {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  /*centers price vertically */
   padding-right: 20px;
+  padding-top: 30px;
 }
 
 .menu__item__select {
@@ -257,21 +293,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
-  -webkit-transform: translateX(85px);
-          transform: translateX(85px);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
   height: 100%;
-  width: 85px;
+  width: 0px;
   background-color: #99E2D0;
 }
 
@@ -287,8 +314,7 @@ a {
 }
 
 .menu__item:hover > .menu__item__select {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  width: 85px;
 }
 
 .menu__item:hover .menu__item__select__icon {

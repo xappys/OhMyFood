@@ -232,6 +232,7 @@ a {
 }
 
 .header .location {
+  color: #464646;
   z-index: 0;
   display: -webkit-box !important;
   display: -ms-flexbox !important;

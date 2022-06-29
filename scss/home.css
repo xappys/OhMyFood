@@ -72,7 +72,7 @@ body {
 /* mixin to center items */
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 @-webkit-keyframes spinner {
@@ -276,13 +276,14 @@ a {
 }
 
 .explore__title {
-  font-size: 20px;
+  font-size: 28px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
 .explore__subtitle {
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 22px;
   padding-bottom: 10px;
   padding-top: 10px;
   color: rgba(0, 0, 0, 0.6);
@@ -319,6 +320,7 @@ a {
 }
 
 .instructions__title {
+  font-size: 28px;
   padding-left: 30px;
 }
 
@@ -339,6 +341,7 @@ a {
 }
 
 .instructions .step {
+  font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,6 +400,7 @@ a {
 }
 
 .restaurants__title {
+  font-size: 28px;
   padding-left: 30px;
   padding-bottom: 10px;
 }

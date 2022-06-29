@@ -11,7 +11,7 @@ body {
 }
 
 /* media query to truncate long item titles on small screens */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 480px) {
   .menu__item :hover .menu__item__title--1 {
     width: 150px;
     white-space: nowrap;

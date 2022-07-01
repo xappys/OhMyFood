@@ -7,50 +7,6 @@ body {
     width: 100%;
     margin: auto;
 }
-/* media query for mobile version */
-@media only screen and (min-width: 992px) {
-    .instructions__title {
-        text-align: center;
-        padding-left: 0px !important;
-    }
-    .steps {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-around !important;
-        padding-left: 10px !important;
-        
-        .step {
-            width: 30% !important;
-            font-size: 16px !important;
-        }
-    }
-    .restaurants {
-        &__title {
-            text-align: center;
-            padding-left: 0px !important;
-        }
-        &__items {
-            flex-direction: row !important;
-            justify-content: space-around !important;
-        }
-        .item {
-            width: 24% !important;
-            height: 270px !important;
-            &__icon--off, &__icon--on {
-                bottom: 60px !important;
-            }
-        }
-    }
-    .footer {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 5px;
-        &__logo {
-            width: 150px !important;
-            padding-top: 5px !important;
-        }
-    }
-}
 /* color variables */
 $primaryColor: #9356DC;
 $secondaryColor: #FF79DA;
@@ -161,8 +117,8 @@ a {
     .location {
         color: rgb(70, 70, 70);
         z-index: 0;
-        display: flex !important;
-        flex-direction: row !important;
+        display: flex !;
+        flex-direction: row !;
         justify-content: center;
         font-family: $secondaryFont;
         height: 65px;
@@ -174,199 +130,243 @@ a {
             padding-right: 10px;
         }
     }
+}
+.explore {
+    @include flexCenter;
+    text-align: center;
+    height: 250px;
+    background-color: $lightGray;
+    &__title {
+        font-size: 28px;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
-    .explore {
-        @include flexCenter;
-        text-align: center;
-        height: 250px;
-        background-color: $lightGray;
-        &__title {
-            font-size: 28px;
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-        &__subtitle {
-            font-weight: 300;
-            font-size: 22px;
-            padding-bottom: 10px;
-            padding-top: 10px;
-            color: rgba(0, 0, 0, 0.6)
-        }
-        &__button {
-            text-decoration: none;
-            display: block;
-            width: 50%;
-            height: 50px;
-            line-height: 50px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border-radius: 25px;
-            border: 0;
-            color: white;
-            font-family: $secondaryFont;
-            background-image: linear-gradient($secondaryColor, $primaryColor);
-            box-shadow: 0px 0px 6px 0.5px gray;
-            &:hover {
-                box-shadow: 0px 0px 12px 0.5px gray;
-                background: linear-gradient(lighten($secondaryColor, 3), lighten($primaryColor, 3));
-            }
-        }
+    &__subtitle {
+        font-weight: 300;
+        font-size: 22px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: rgba(0, 0, 0, 0.6)
     }
-    .instructions {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        &__title {
-            font-size: 28px;
-            padding-left: 30px;
-        }
-        .steps {
-            @include flexCenter;
-        }
-        .step {
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 80px;
-        width: 90%;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: 25px;
+    &__button {
+        text-decoration: none;
+        display: block;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
         margin-top: 10px;
         margin-bottom: 10px;
-        background-color: $lightGray;
-        box-shadow: 0px 5px 10px darken($darkGray, 5);
+        border-radius: 25px;
+        border: 0;
+        color: white;
+        font-family: $secondaryFont;
+        background-image: linear-gradient($secondaryColor, $primaryColor);
+        box-shadow: 0px 0px 6px 0.5px gray;
+        &:hover {
+            box-shadow: 0px 0px 12px 0.5px gray;
+            background: linear-gradient(lighten($secondaryColor, 3), lighten($primaryColor, 3));
+        }
+    }
+}
+.instructions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &__title {
+        font-size: 28px;
+        padding-left: 30px;
+    }
+    .steps {
+        @include flexCenter;
+    }
+    .step {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: $lightGray;
+    box-shadow: 0px 5px 10px darken($darkGray, 5);
+    &__icon {
+        padding-right: 20px;
+        color: gray;
+    }
+    &__number {
+        @include flexCenter;
+        border-radius: 100%;
+        min-width: 25px;
+        height: 25px;
+        transform:translateX(-22px);
+        color: white;
+        font-family: $secondaryFont;
+        background-color: $primaryColor;
+    }
+    } 
+}
+.restaurants {
+    background-color: $lightGray;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    &__title {
+        font-size: 28px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.item {
+    height: 250px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 12px 6px #e1e1e1;
+    transform:scale(1);
+    animation: transform 500ms; 
+    &:hover {
+        transform:scale(1.02);
+    }
+    &__img {
+        width:100%;
+        height: 60%;
+        object-fit:cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        flex: 1 1 0;
+        object-position: 70% 70%;
+    }
+    &__label {
+        @include flexCenter;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 100px;
+        height: 37px;
+        border-radius: 4px;
+        background-color: $tertiaryColor;
+        color: darken($tertiaryColor, 38);
+        font-family: $secondaryFont;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    &__title {
+        font-family: $secondaryFont;
+        padding-left: 15px;
+        padding-right: 55px;
+        padding-top: 5px;
+    }
+    h3 {
+        font-weight: 400;
+    }
+    &__icon--off, &__icon--on {
+        float: right;
+        position: absolute;
+        right: 20px;
+        bottom: 50px;
+        font-size: 25px;
+        opacity: 1;
+        color: 2px solid black;
+        background-color: white;
+        transition: opacity 500ms ease-in-out;
+    }
+    &__icon--on {
+        background: -webkit-linear-gradient($primaryColor, $secondaryColor);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+    }   
+}
+.footer {
+    overflow-y: hidden;
+    background-color: darken($darkGray, 70);
+    color: white;
+    line-height: 30px; /* adds space above and below each item */
+    padding-top: 15px;
+    &__logo {
+        filter:invert(100%);
+        width: 30%;
+        padding-left: 20px;
+    }
+    .suggest {
+        display: flex;
         &__icon {
-            padding-right: 20px;
-            color: gray;
+            width: 20px;
+            padding-left: 20px;
+            padding-right: 30px;
+            transform:translateY(8px);
         }
-        &__number {
-            @include flexCenter;
-            border-radius: 100%;
-            min-width: 25px;
-            height: 25px;
-            transform:translateX(-22px);
-            color: white;
-            font-family: $secondaryFont;
-            background-color: $primaryColor;
+    }
+    .partner {
+        display: flex;
+        &__icon {
+            width: 20px;
+            padding-left: 20px;
+            padding-right: 30px;
+            transform:translateY(8px);
         }
-       } 
+    }
+    .legal, .contact {
+        padding-left: 50px;
+    }
+    .contact {
+        color: white !;
+    }
+}
+/* media query for mobile version BEGINS*/
+@media only screen and (min-width: 992px) {
+    .instructions__title {
+        text-align: center;
+        padding-left: 0px !;
+    }
+    .steps {
+        display: flex !;
+        flex-direction: row !;
+        justify-content: space-around !;
+        padding-left: 10px !;
+        
+        .step {
+            width: 30% !;
+            font-size: 16px !;
+        }
     }
     .restaurants {
-        background-color: $lightGray;
-        padding-top: 20px;
-        padding-bottom: 10px;
         &__title {
-            font-size: 28px;
-            padding-left: 30px;
-            padding-bottom: 10px;
+            text-align: center;
+            padding-left: 0px !;
         }
         &__items {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row !;
+            justify-content: space-around !;
         }
-    }
-    .item {
-        height: 250px;
-        width: 90%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 20px;
-        background-color: white;
-        box-shadow: 0px 0px 12px 6px #e1e1e1;
-        transform:scale(1);
-        animation: transform 500ms; 
-        &:hover {
-            transform:scale(1.02);
-        }
-        &__img {
-            width:100%;
-            height: 60%;
-            object-fit:cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            flex: 1 1 0;
-            object-position: 70% 70%;
-        }
-        &__label {
-            @include flexCenter;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 100px;
-            height: 37px;
-            border-radius: 4px;
-            background-color: $tertiaryColor;
-            color: darken($tertiaryColor, 38);
-            font-family: $secondaryFont;
-            font-size: 16px;
-            font-weight: 700;
-        }
-        &__title {
-            font-family: $secondaryFont;
-            padding-left: 15px;
-            padding-right: 55px;
-            padding-top: 5px;
-        }
-        h3 {
-            font-weight: 400;
-        }
-        &__icon--off, &__icon--on {
-            float: right;
-            position: absolute;
-            right: 20px;
-            bottom: 50px;
-            font-size: 25px;
-            opacity: 1;
-            color: 2px solid black;
-            background-color: white;
-            transition: opacity 500ms ease-in-out;
-        }
-        &__icon--on {
-            background: -webkit-linear-gradient($primaryColor, $secondaryColor);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
-            &:hover {
-                opacity: 1;
+        .item {
+            width: 24% !;
+            height: 270px !;
+            &__icon--off, &__icon--on {
+            bottom: 60px !;
             }
-        }   
+        }
     }
     .footer {
-        overflow-y: hidden;
-        background-color: darken($darkGray, 70);
-        color: white;
-        line-height: 30px; /* adds space above and below each item */
-        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5px;
         &__logo {
-            filter:invert(100%);
-            width: 30%;
-            padding-left: 20px;
-        }
-        .suggest {
-            display: flex;
-            &__icon {
-                width: 20px;
-                padding-left: 20px;
-                padding-right: 30px;
-                transform:translateY(8px);
-            }
-        }
-        .partner {
-            display: flex;
-            &__icon {
-                width: 20px;
-                padding-left: 20px;
-                padding-right: 30px;
-                transform:translateY(8px);
-            }
-        }
-        .legal, .contact {
-            padding-left: 50px;
-        }
-        .contact {
-            color: white !important;
+            width: 150px !;
+            padding-top: 5px !;
         }
     }
+}

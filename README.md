@@ -1,3 +1,5 @@
+https://xappys.github.io/OhMyFood/
+
 # OhMyFood
 
 A website to explore the tastiest meals out there.
@@ -23,15 +25,9 @@ Virgilijus Glodenis
 
 * 0.2
     * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
 ## License
 
-This project is licensed under the OhMyFood License.
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* 
+This project is licensed under the X License.

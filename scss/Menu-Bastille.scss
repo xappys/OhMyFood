@@ -7,47 +7,6 @@ body {
     width: 100%;
     margin: auto;
 }
-/* media query to realign footer for desktop */
-@media only screen and (min-width: 992px) {
-    .footer {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 5px;
-        &__logo {
-            width: 150px !important;
-            padding-top: 5px !important;
-        }
-    }
-}
-/* media query to truncate long item titles on small screens */
-@media only screen and (max-width: 430px) {
-    .menu__item {
-        .menu__item__title {
-            font-size: 14px;
-        }
-        .menu__item__subtitle {
-            font-size: 12px;
-        }
-        :hover .menu__item__title--1 {
-            width: 150px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        :hover .menu__item__title--2 {
-            width: 150px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        :hover .menu__item__subtitle--2 {
-            width: 150px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        } 
-    }
-}
 /* variables for menu dishes below */
 $num-bars: 9;
 $anim-dur: 2000ms;
@@ -277,6 +236,47 @@ button {
         padding-left: 50px;
     }
     .contact {
-        color: white !important;
+        color: white;
+    }
+}
+/* media query to realign footer for desktop */
+@media only screen and (min-width: 992px) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5px;
+        &__logo {
+            width: 150px;
+            padding-top: 5px;
+        }
+    }
+}
+/* media query to truncate long item titles on small screens */
+@media only screen and (max-width: 430px) {
+    .menu__item {
+        .menu__item__title {
+            font-size: 14px;
+        }
+        .menu__item__subtitle {
+            font-size: 12px;
+        }
+        :hover .menu__item__title--1 {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        :hover .menu__item__title--2 {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        :hover .menu__item__subtitle--2 {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        } 
     }
 }

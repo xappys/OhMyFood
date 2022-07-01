@@ -10,33 +10,6 @@ body {
   margin: auto;
 }
 
-/* media query to realign footer for desktop */
-@media only screen and (min-width: 992px) {
-  .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-bottom: 5px;
-  }
-  .footer__logo {
-    width: 150px !important;
-    padding-top: 5px !important;
-  }
-}
-
-/* media query to resize font for small screens */
-@media only screen and (max-width: 430px) {
-  .menu__item__title {
-    font-size: 14px;
-  }
-  .menu__item__subtitle {
-    font-size: 12px;
-  }
-}
-
 /* variables for menu dishes below */
 /* color variables */
 /* font variables */
@@ -414,6 +387,33 @@ button:hover {
 }
 
 .footer .contact {
-  color: white !important;
+  color: white;
+}
+
+/* media query to realign footer for desktop */
+@media only screen and (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 5px;
+  }
+  .footer__logo {
+    width: 150px !important;
+    padding-top: 5px !important;
+  }
+}
+
+/* media query to resize font for small screens */
+@media only screen and (max-width: 430px) {
+  .menu__item__title {
+    font-size: 14px;
+  }
+  .menu__item__subtitle {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=Menu-TheEnchantedPlate.css.map */

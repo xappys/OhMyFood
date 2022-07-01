@@ -26,12 +26,11 @@ body {
             flex-direction: row !important;
     -ms-flex-pack: distribute !important;
         justify-content: space-around !important;
+    padding-left: 10px !important;
   }
   .steps .step {
     width: 30% !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    font-size: 16px !important;
   }
   .restaurants__title {
     text-align: center;
@@ -420,7 +419,7 @@ a {
 }
 
 .item {
-  height: 190px;
+  height: 250px;
   width: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -453,6 +452,33 @@ a {
      object-position: 70% 70%;
 }
 
+.item__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 100px;
+  height: 37px;
+  border-radius: 4px;
+  background-color: #99E2D0;
+  color: #299077;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .item__title {
   font-family: Roboto;
   padding-left: 15px;
@@ -460,11 +486,15 @@ a {
   padding-top: 5px;
 }
 
+.item h3 {
+  font-weight: 400;
+}
+
 .item__icon--off, .item__icon--on {
   float: right;
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 50px;
   font-size: 25px;
   opacity: 1;
   color: 2px solid black;
@@ -474,7 +504,9 @@ a {
 }
 
 .item__icon--on {
-  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 

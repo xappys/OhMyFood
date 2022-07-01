@@ -137,7 +137,9 @@ a {
         transition: opacity 500ms ease-in-out;
     }
     &__icon--on {
-        color: $primaryColor;
+        background: -webkit-linear-gradient($primaryColor, $secondaryColor);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         transform: translateX(25px);
         opacity: 0;
         &:hover {

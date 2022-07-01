@@ -17,10 +17,11 @@ body {
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-around !important;
+        padding-left: 10px !important;
         
         .step {
             width: 30% !important;
-            justify-content: center !important;
+            font-size: 16px !important;
         }
     }
     .restaurants {
@@ -267,7 +268,7 @@ a {
         }
     }
     .item {
-        height: 190px;
+        height: 250px;
         width: 90%;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -288,18 +289,34 @@ a {
             flex: 1 1 0;
             object-position: 70% 70%;
         }
+        &__label {
+            @include flexCenter;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 100px;
+            height: 37px;
+            border-radius: 4px;
+            background-color: $tertiaryColor;
+            color: darken($tertiaryColor, 38);
+            font-family: $secondaryFont;
+            font-size: 16px;
+            font-weight: 700;
+        }
         &__title {
             font-family: $secondaryFont;
             padding-left: 15px;
             padding-right: 55px;
             padding-top: 5px;
-
+        }
+        h3 {
+            font-weight: 400;
         }
         &__icon--off, &__icon--on {
             float: right;
             position: absolute;
             right: 20px;
-            bottom: 20px;
+            bottom: 50px;
             font-size: 25px;
             opacity: 1;
             color: 2px solid black;
@@ -307,7 +324,9 @@ a {
             transition: opacity 500ms ease-in-out;
         }
         &__icon--on {
-            color: $primaryColor;
+            background: -webkit-linear-gradient($primaryColor, $secondaryColor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             opacity: 0;
             &:hover {
                 opacity: 1;

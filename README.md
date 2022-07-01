@@ -1,4 +1,8 @@
+Webpage:
 https://xappys.github.io/OhMyFood/
+
+Github repository:
+https://github.com/xappys/OhMyFood
 
 # OhMyFood
 

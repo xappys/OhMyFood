@@ -384,7 +384,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 100%;
-  width: 25px;
+  min-width: 25px;
   height: 25px;
   -webkit-transform: translateX(-22px);
           transform: translateX(-22px);

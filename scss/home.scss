@@ -243,7 +243,7 @@ a {
         &__number {
             @include flexCenter;
             border-radius: 100%;
-            width: 25px;
+            min-width: 25px;
             height: 25px;
             transform:translateX(-22px);
             color: white;

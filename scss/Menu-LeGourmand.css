@@ -1,1 +1,417 @@
-/* No CSS *//*# sourceMappingURL=Menu-LeGourmand.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+}
+
+/* media query to realign footer for desktop */
+@media only screen and (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 5px;
+  }
+  .footer__logo {
+    width: 150px !important;
+    padding-top: 5px !important;
+  }
+}
+
+/* media query to truncate long item titles on small screens */
+@media only screen and (max-width: 460px) {
+  .menu__item .menu__item__title {
+    font-size: 14px;
+  }
+  .menu__item .menu__item__subtitle {
+    font-size: 10px;
+  }
+  .menu__item :hover .menu__item__title--4 {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* variables for menu dishes below */
+/* color variables */
+/* font variables */
+/* mixin to center items */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__return {
+  padding-top: 28px;
+  padding-left: 15px;
+  font-size: 23px;
+}
+
+.header__return::before {
+  padding-right: 35px;
+  color: black;
+}
+
+.header__logo {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 110px;
+  font-family: Shrikhand;
+  z-index: 1;
+  -webkit-transform: translateX(-20.13px);
+          transform: translateX(-20.13px);
+  /* centers the logo as arrow takes up space */
+}
+
+.img {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.menu {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  z-index: 1;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  background-color: #f5f5f5;
+  height: auto;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-bottom: -50px;
+  /* fixes 50px of white-space below menu section due to translateY */
+}
+
+.menu__title {
+  font-family: Shrikhand;
+  font-size: 28px;
+  padding-top: 30px;
+}
+
+.menu__subtitle {
+  font-family: Roboto;
+  padding-top: 50px;
+  width: 100px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.menu__icon--off, .menu__icon--on {
+  float: right;
+  position: relative;
+  right: 35px;
+  bottom: 30px;
+  font-size: 25px;
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.menu__icon--on {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+  opacity: 0;
+}
+
+.menu__icon--on:hover {
+  opacity: 1;
+}
+
+.menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 75px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90vw;
+  border: 0px;
+  padding: 0px;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 12px 6px #e1e1e1;
+          box-shadow: 0px 0px 12px 6px #e1e1e1;
+  opacity: 0;
+  overflow-x: hidden;
+  /* to hide the hover effect */
+  -webkit-animation: slide 2000ms;
+          animation: slide 2000ms;
+}
+
+.menu__item--1 {
+  -webkit-animation-delay: 222.22222ms;
+          animation-delay: 222.22222ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--2 {
+  -webkit-animation-delay: 444.44444ms;
+          animation-delay: 444.44444ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--3 {
+  -webkit-animation-delay: 666.66667ms;
+          animation-delay: 666.66667ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--4 {
+  -webkit-animation-delay: 888.88889ms;
+          animation-delay: 888.88889ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--5 {
+  -webkit-animation-delay: 1111.11111ms;
+          animation-delay: 1111.11111ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--6 {
+  -webkit-animation-delay: 1333.33333ms;
+          animation-delay: 1333.33333ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--7 {
+  -webkit-animation-delay: 1555.55556ms;
+          animation-delay: 1555.55556ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--8 {
+  -webkit-animation-delay: 1777.77778ms;
+          animation-delay: 1777.77778ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu__item--9 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.menu__item__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.menu__item__title {
+  padding-top: 18px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.menu__item__subtitle {
+  font-weight: 100;
+  padding-left: 10px;
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.menu__item__price {
+  padding-right: 20px;
+  padding-top: 30px;
+}
+
+.menu__item__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+  height: 100%;
+  width: 0px;
+  background-color: #99E2D0;
+}
+
+.menu__item__select__icon {
+  font-size: 25px;
+  color: white;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: 1000ms -webkit-transform 100ms;
+  transition: 1000ms -webkit-transform 100ms;
+  transition: 1000ms transform 100ms;
+  transition: 1000ms transform 100ms, 1000ms -webkit-transform 100ms;
+}
+
+.menu__item:hover > .menu__item__select {
+  width: 85px;
+}
+
+.menu__item:hover .menu__item__select__icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+button {
+  margin: auto;
+  /* centers button horizontally */
+  display: block;
+  /* centers button horizontally */
+  width: 180px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border: 0;
+  color: white;
+  font-family: Roboto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 0px 0px 6px 0.5px gray;
+          box-shadow: 0px 0px 6px 0.5px gray;
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 0px 12px 0.5px gray;
+          box-shadow: 0px 0px 12px 0.5px gray;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff88de), to(#9b63df));
+  background: linear-gradient(#ff88de, #9b63df);
+}
+
+.footer {
+  overflow-y: hidden;
+  background-color: #343434;
+  color: white;
+  line-height: 30px;
+  /* adds space above and below each item */
+  padding-top: 15px;
+}
+
+.footer__logo {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 30%;
+  padding-left: 20px;
+}
+
+.footer .suggest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .suggest__icon {
+  width: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.footer .partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .partner__icon {
+  width: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.footer .legal, .footer .contact {
+  padding-left: 50px;
+}
+
+.footer .contact {
+  color: white !important;
+}
+/*# sourceMappingURL=Menu-LeGourmand.css.map */

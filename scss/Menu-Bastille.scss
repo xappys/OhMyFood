@@ -138,6 +138,7 @@ a {
     }
     &__icon--on {
         background: -webkit-linear-gradient($primaryColor, $secondaryColor);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transform: translateX(25px);

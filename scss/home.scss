@@ -323,40 +323,40 @@ a {
         padding-left: 50px;
     }
     .contact {
-        color: white !;
+        color: white;
     }
 }
 /* media query for mobile version BEGINS */
 @media only screen and (min-width: 992px) {
     .instructions__title {
         text-align: center;
-        padding-left: 0px !;
+        padding-left: 0px;
     }
     .steps {
-        display: flex !;
-        flex-direction: row !;
-        justify-content: space-around !;
-        padding-left: 10px !;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 10px;
         
         .step {
-            width: 30% !;
-            font-size: 16px !;
+            width: 30%;
+            font-size: 16px;
         }
     }
     .restaurants {
         &__title {
             text-align: center;
-            padding-left: 0px !;
+            padding-left: 0px;
         }
         &__items {
-            flex-direction: row !;
-            justify-content: space-around !;
+            flex-direction: row;
+            justify-content: space-around;
         }
         .item {
-            width: 24% !;
-            height: 270px !;
+            width: 24%;
+            height: 270px;
             &__icon--off, &__icon--on {
-            bottom: 60px !;
+            bottom: 60px;
             }
         }
     }
@@ -365,8 +365,8 @@ a {
         justify-content: center;
         padding-bottom: 5px;
         &__logo {
-            width: 150px !;
-            padding-top: 5px !;
+            width: 150px;
+            padding-top: 5px;
         }
     }
 }

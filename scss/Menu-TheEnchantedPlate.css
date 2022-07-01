@@ -27,31 +27,13 @@ body {
   }
 }
 
-/* media query to truncate long item titles on small screens */
+/* media query to resize font for small screens */
 @media only screen and (max-width: 430px) {
-  .menu__item .menu__item__title {
+  .menu__item__title {
     font-size: 14px;
   }
-  .menu__item .menu__item__subtitle {
+  .menu__item__subtitle {
     font-size: 12px;
-  }
-  .menu__item :hover .menu__item__title--1 {
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu__item :hover .menu__item__title--2 {
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .menu__item :hover .menu__item__subtitle--2 {
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
@@ -127,8 +109,9 @@ a {
 
 .menu__title {
   font-family: Shrikhand;
-  font-size: 28px;
+  font-size: 26px;
   padding-top: 30px;
+  padding-right: 65px;
 }
 
 .menu__subtitle {
